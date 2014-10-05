@@ -6,6 +6,8 @@ class RockPaperScissors < Sinatra::Base
 	# GAME = Game.new
 
 	set :views, Proc.new { File.join(root, "../" "views") }
+  set :public_folder, settings.root + '/../public/'
+
   
   get '/' do
    erb :index
@@ -22,6 +24,18 @@ class RockPaperScissors < Sinatra::Base
     #GAME.add_player player
     erb :game_screen
   end
+
+  get '/rock' do
+    erb :rock
+  end
+
+  get '/paper' do
+    erb :paper
+  end
+
+  get '/scissors' do
+    erb :scissors
+  end  
 
   # start the server if ruby file executed directly
   run! if app_file == $0
