@@ -3,15 +3,20 @@ class Game
 	attr_accessor :choice
 
 	def initialize
-		choice ||= []
+		@choice ||= []
 	end
 
 	def choice
 		%w(rock paper scissors)
 	end
 
+	def player_turn
+		
+	end
+		
+
 	def randomiser
-		shuffle.first
+		choice.sample
 	end
 
 end

@@ -1,5 +1,5 @@
 require 'sinatra/base'
-# require './lib/player'
+require './lib/game'
 
 class RockPaperScissors < Sinatra::Base
 
@@ -36,6 +36,10 @@ class RockPaperScissors < Sinatra::Base
   get '/scissors' do
     erb :scissors
   end  
+
+  get '/comp_turn' do
+    erb :comp_turn
+  end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
