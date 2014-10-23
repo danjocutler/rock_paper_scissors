@@ -1,6 +1,6 @@
 Given(/^I am on the game screen$/) do
   visit ('/name_entry')
-  fill_in('name', :with => "Dan")
+  fill_in('name', with: "Dan")
   click_on "Register"
 end
 
@@ -9,18 +9,20 @@ When(/^I click on "(.*?)"$/) do |weapon|
 end
 
 Then(/^I should be able to see "(.*?)"$/) do |text|
-	visit '/comp_turn'
+	visit '/result'
   expect(page).to have_content text
 end
 
 Given(/^I have made my choice$/) do
-  visit '/comp_turn'
+  visit '/result'
 end
 
-When(/^the computer chooses it's move$/) do
-  pending # express the regexp above with the code you wish you had
+When(/^the computer chooses its move$/) do
+  
 end
 
-Then(/^I should see the result$/) do
+Then(/^I should be able to see the result$/) do
   expect(page).to have_content 
 end
+
+

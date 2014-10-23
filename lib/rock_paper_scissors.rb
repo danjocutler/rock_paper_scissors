@@ -1,12 +1,15 @@
 require 'sinatra/base'
 require './lib/game'
+require './lib/player'
 
 class RockPaperScissors < Sinatra::Base
 
-	# GAME = Game.new
+	GAME = Game.new
+  PLAYER = Player.new
 
 	set :views, Proc.new { File.join(root, "../" "views") }
   set :public_folder, settings.root + '/../public/'
+  enable :sessions
 
   
   get '/' do
@@ -17,28 +20,25 @@ class RockPaperScissors < Sinatra::Base
   	erb :name_entry
   end
 
-  post '/game_screen' do  
+  post '/name_entry' do  
   	@name = params[:name]
-    # player = Player.new
-    # player.name = player_name
-    #GAME.add_player player
+    session[:name] = @name
+    redirect '/game_screen'
+  end
+
+  get '/game_screen' do
+    @name = session[:name]
     erb :game_screen
   end
 
-  get '/rock' do
-    erb :rock
-  end
-
-  get '/paper' do
-    erb :paper
-  end
-
-  get '/scissors' do
-    erb :scissors
-  end  
-
-  get '/comp_turn' do
-    erb :comp_turn
+  post '/game_screen/result' do
+    @name = session[:name]
+    @choice_one = params[:choice_one].to_sym
+    # puts :choice_one
+    @choice_two = GAME.computer_turn
+    # puts GAME.computer_turn
+    @result = GAME.play(@choice_one, @choice_two)
+    erb :result    
   end
 
   # start the server if ruby file executed directly

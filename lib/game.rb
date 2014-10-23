@@ -1,22 +1,23 @@
 class Game
 
-	attr_accessor :choice
-
-	def initialize
-		@choice ||= []
-	end
-
 	def choice
-		%w(rock paper scissors)
+		[:rock, :paper, :scissors]
 	end
 
-	def player_turn
-		
-	end
-		
-
-	def randomiser
+	def computer_turn
 		choice.sample
 	end
 
+	GESTURES = {rock: :scissors, paper: :rock, scissors: :paper}
+
+	def play(choice_one, choice_two)
+		if choice_one == choice_two 
+			"draw"
+		elsif 
+			GESTURES[choice_one] == choice_two
+			"Player wins"
+		else
+			"Computer wins"
+		end
+	end
 end

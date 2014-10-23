@@ -6,7 +6,7 @@ Feature: Playing the game
 	Scenario: Human turn
 		Given I am on the game screen
 		When I click on "rock"
-		Then I should be able to see "computer's move"
+		Then I should be able to see "Ok, now it's my turn!"
 
 	Scenario: Computer turn
 		Given I have made my choice

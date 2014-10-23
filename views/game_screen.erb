@@ -1,13 +1,14 @@
-	   <h1>Welcome  <%= @name %></h1>
+	   <h1>Welcome,  <%= @name %></h1>
 
 	   <p>Make yer move, punk!</p>
 
   <body>
 
-	 
-	<a href='/comp_turn'><input type="image" src='/pictures/rock.jpg' value='rock'></a>
-	<a href='/comp_turn'><input type="image" src='/pictures/paper.jpg' value='paper'></a>
-	<a href='/comp_turn'><input type="image" src='/pictures/scissors.jpg' value='scissors'></a>
+	<form action="/game_screen/result" method="post"> 
+		<input type="image" src='/pictures/rock.jpg' name='choice_one' value='rock'>
+		<input type="image" src='/pictures/paper.jpg' name='choice_one' value='paper'>
+		<input type="image" src='/pictures/scissors.jpg' name='choice_one' value='scissors'>
+	</form>
  </body>
 
  

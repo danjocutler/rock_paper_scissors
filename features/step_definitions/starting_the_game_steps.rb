@@ -15,7 +15,7 @@ Given(/^I am on the name entry screen$/) do
 end
 
 When(/^I enter my name$/) do
-  fill_in('name', :with => "Dan") 
+  fill_in('name', with: "Dan") 
 end
 
 When(/^I hit "(.*?)"$/) do |button|

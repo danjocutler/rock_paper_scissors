@@ -12,6 +12,6 @@ Feature: Starting the game
 		Given I am on the name entry screen
 		When I enter my name
 		And I hit "Register"
-		Then I should see "Welcome Dan"
+		Then I should see "Welcome, Dan"
 
 		
