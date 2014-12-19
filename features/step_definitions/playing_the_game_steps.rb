@@ -9,7 +9,6 @@ When(/^I click on "(.*?)"$/) do |weapon|
 end
 
 Then(/^I should be able to see "(.*?)"$/) do |text|
-	visit '/result'
   expect(page).to have_content text
 end
 

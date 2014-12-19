@@ -6,9 +6,8 @@ Feature: Playing the game
 	Scenario: Human turn
 		Given I am on the game screen
 		When I click on "rock"
-		Then I should be able to see "Ok, now it's my turn!"
+		Then I should be able to see "You chose rock"
 
 	Scenario: Computer turn
 		Given I have made my choice
-		When the computer chooses it's move
 		Then I should be able to see the result
