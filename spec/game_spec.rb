@@ -18,31 +18,31 @@ describe Game do
 	context "results" do
 
 		it "same choices should result in a draw" do
-				expect(game.play(:rock, :rock)).to eq "draw"
+				expect(game.play(:rock, :rock)).to eq "It's a draw!"
 		end
 
 		it "rock should beat scissors" do
-			expect(game.play(:rock, :scissors)).to eq "Player wins"
+			expect(game.play(:rock, :scissors)).to eq "Player wins!"
 		end
 
 		it "paper should beat rock" do
-			expect(game.play(:paper, :rock)).to eq "Player wins"
+			expect(game.play(:paper, :rock)).to eq "Player wins!"
 		end
 
 		it "scissors should beat paper" do
-			expect(game.play(:scissors, :paper)).to eq "Player wins"
+			expect(game.play(:scissors, :paper)).to eq "Player wins!"
 		end
 
 		it "scissors should not beat rock" do
-			expect(game.play(:scissors, :rock)).to eq "Computer wins"
+			expect(game.play(:scissors, :rock)).to eq "Computer wins!"
 		end
 
 		it "rock should not beat paper" do
-			expect(game.play(:rock, :paper)).to eq "Computer wins"
+			expect(game.play(:rock, :paper)).to eq "Computer wins!"
 		end
 
 		it "paper should not beat scissors" do
-			expect(game.play(:paper, :scissors)).to eq "Computer wins"
+			expect(game.play(:paper, :scissors)).to eq "Computer wins!"
 		end
 	end
 end

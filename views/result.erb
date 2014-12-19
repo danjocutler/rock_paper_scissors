@@ -1,3 +1,14 @@
-Player <%= @choice_one %>
-Computer <%= @choice_two %>
-<%= @result %>
+<h2>You chose <%= @choice_one %></h2>
+<h2>Computer chose <%= @choice_two %></h2>
+
+<% if (@choice_one == :paper && @choice_two == :scissors) || (@choice_one == :scissors && @choice_two == :paper)%>
+	<img src='/pictures/scissors_wins.jpg'>
+<% elsif (@choice_one == :scissors && @choice_two == :rock) || (@choice_one == :rock && @choice_two == :scissors)%>
+	<img src='/pictures/rock_wins.jpg'>
+<% elsif (@choice_one == :rock && @choice_two == :paper) || (@choice_one == :paper && @choice_two == :rock)%>
+	<img src='/pictures/paper_wins.jpg'>
+<% else %>
+	<img src='/pictures/draw.jpg'>
+<% end %>
+
+<h1><%= @result %></h1>

@@ -34,13 +34,10 @@ class RockPaperScissors < Sinatra::Base
   post '/game_screen/result' do
     @name = session[:name]
     @choice_one = params[:choice_one].to_sym
-    # puts :choice_one
     @choice_two = GAME.computer_turn
-    # puts GAME.computer_turn
     @result = GAME.play(@choice_one, @choice_two)
     erb :result    
   end
 
-  # start the server if ruby file executed directly
   run! if app_file == $0
 end

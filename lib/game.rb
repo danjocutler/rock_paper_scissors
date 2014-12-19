@@ -12,12 +12,12 @@ class Game
 
 	def play(choice_one, choice_two)
 		if choice_one == choice_two 
-			"draw"
+			"It's a draw!"
 		elsif 
 			GESTURES[choice_one] == choice_two
-			"Player wins"
+			"Player wins!"
 		else
-			"Computer wins"
+			"Computer wins!"
 		end
 	end
 end
