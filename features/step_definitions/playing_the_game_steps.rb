@@ -16,10 +16,6 @@ Given(/^I have made my choice$/) do
   visit '/result'
 end
 
-When(/^the computer chooses its move$/) do
-  
-end
-
 Then(/^I should be able to see the result$/) do
   expect(page).to have_content 
 end
