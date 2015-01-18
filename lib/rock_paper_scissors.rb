@@ -11,7 +11,6 @@ class RockPaperScissors < Sinatra::Base
   set :public_folder, settings.root + '/../public/'
   enable :sessions
 
-  
   get '/' do
    erb :index
   end
