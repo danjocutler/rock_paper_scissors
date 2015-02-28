@@ -1,5 +1,6 @@
 ROCK, PAPER, SCISSORS
 =====================
+[![Code Climate](https://codeclimate.com/github/danjocutler/rock_paper_scissors/badges/gpa.svg)](https://codeclimate.com/github/danjocutler/rock_paper_scissors)
 A Rock, paper, scissors game that can be played on the web with the following features:
 
 	the player has to enter their name before the game
